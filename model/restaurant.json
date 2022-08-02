@@ -1,0 +1,21 @@
+[
+    {
+        "id":1,
+        "name":"KFC",
+        "city":"banglore"
+    },
+
+    {
+        "id":2,
+        "name":"Taj",
+        "city":"mumbai"
+    },
+
+    {
+        "id":3,
+        "name":"icecream factory",
+        "city":"pune"
+    }
+
+
+]
