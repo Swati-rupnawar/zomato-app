@@ -7,6 +7,10 @@
     "start": "node app.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
+  "engines": {
+    "node": "16.15.1",
+    "npm": "8.11.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,10 +21,9 @@
     "crypto": "^1.0.1",
     "express": "^4.18.1",
     "fs": "^0.0.1-security",
-    "mongoose": "^6.1.0",
+    "mongoose": "^6.5.0",
     "razorpay": "^2.8.2",
     "shortid": "^2.2.16"
   },
-  "devDependencies": {},
   "description": ""
 }
