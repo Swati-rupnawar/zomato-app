@@ -24,6 +24,7 @@
     "fs": "^0.0.1-security",
     "mongoose": "^6.5.0",
     "razorpay": "^2.8.2",
+    "react-facebook-login": "^4.1.1",
     "shortid": "^2.2.16"
   },
   "description": ""
