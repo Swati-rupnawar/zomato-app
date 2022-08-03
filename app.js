@@ -15,10 +15,10 @@ const cors = require('cors')
 
 const mongoose = require('mongoose')
 
-// connect with mogodb
+// connect with mongodb
 const DBCONNECTIONSTRING = "mongodb+srv://root:root@cluster0.qxodq.mongodb.net/zomato"
-// "mongodb+srv://root:root@cluster0.76pet03.mongodb.net/zomato40"
-// 'mongodb://127.0.0.1:27017/zomato_40'
+
+// 'mongodb://127.0.0.1:27017/zomato_assign_6'
 
 // connect to mongoose server
 mongoose.connect(

@@ -60,8 +60,8 @@ export default function RestaurantsDetail() {
             currency:orderData.currency,
             order_id:orderData.id,
             prefill:{
-              email:"ashp@gamil.com",
-              contact:'243516230'
+              email:"abc@gamil.com",
+              contact:'1234567890'
             },
             handler:function(response){
               // call api  that would save transaction in db
@@ -203,8 +203,8 @@ export default function RestaurantsDetail() {
                   <div className='cuisines'>{item.itemDescription}</div>
 
                   <div>
-                    <button className='btn btn-secondary' onClick={()=> calTotalprice(item)}>Add</button>
-                    <button className='btn btn-secondary ' onClick={()=>removeoneprice(item)} style={{position:'absolute',left:'140px'}} >Remove</button>
+                    <button className='btn btn-secondary' onClick={()=> calTotalprice(item)} style={{backgroundColor:'green'}}>Add</button>
+                    <button className='btn btn-secondary ' onClick={()=>removeoneprice(item)} style={{position:'absolute',left:'140px', backgroundColor:'red'}} >Remove</button>
                   </div>
 
             

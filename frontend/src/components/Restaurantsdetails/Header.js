@@ -19,11 +19,6 @@ const customStyles = {
   },
 };
 
-  
-
-
-
-
 export default function () {
 
 
@@ -34,6 +29,9 @@ export default function () {
   const[isHelpModalopen,setHelpModal] = useState(false)
 
   const responseFacebook = (response) => {
+    console.log(response);
+  }
+  const responsegooglelogin = (response) => {
     console.log(response);
   }
 
@@ -164,10 +162,10 @@ export default function () {
             </h2><br/>
             <form>
               {console.log("login",login)}
-              <input placeholder='enter email' type='text' name='email' onChange={(e)=>handlelogin(e)}></input><br/>
-              <input placeholder='enter password' type='password' name='password' onChange={(e)=>handlelogin(e)}></input><br/>
-              <button onClick={LOGIN}>Login</button>
-              <a class="login-help-link link float-end" target="_self" data-uia="login-help-link"  onClick={()=>setHelpModal(true)}>Need help?</a>
+              <input placeholder='enter email' type='text' name='email' onChange={(e)=>handlelogin(e)}></input><br/><br/>
+              <input placeholder='enter password' type='password' name='password' onChange={(e)=>handlelogin(e)}></input><br/><br/> 
+              <button onClick={LOGIN} style={{backgroundColor:'green'}}>Login</button><br/>
+              <a class="login-help-link link float-end" target="_self" data-uia="login-help-link"  onClick={()=>setHelpModal(true)}>Need help?</a> <br/>
 
               <div class="login-signup-now" data-uia="login-signup-now">New User? <a class="" target="_self" onClick={()=>{
                 setCreateModal(true);
@@ -176,8 +174,8 @@ export default function () {
 
 
 
-              <Modal isOpen={isHelpModalopen}>
-                <button onClick={()=>setHelpModal(false)} className='btn btn-danger float-end' >x</button>
+              <Modal isOpen={isHelpModalopen} style={{position:'absulate' , height:'5rem'}}>
+                <button onClick={()=>setHelpModal(false)}  className='btn btn-danger float-end' >x</button>
                 <div class="login-content">
                     <div data-uia="password-reset-wrapper">
                       <h1 data-uia="password-reset-header">Forgot Email/Password</h1>
@@ -214,6 +212,7 @@ export default function () {
                <GoogleLogin
                 clientId="973880459978-3bqve49jc2v0b4sj2b60a2runv41j6rl.apps.googleusercontent.com"
                 buttonText="Login with Google"
+                callback={()=>responsegooglelogin}
               />
 
                </h2>
